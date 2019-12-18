@@ -1,0 +1,20 @@
+
+
+  .jumbotron{
+    background-image: url("https://www.bangkokhospital.com/sites/default/files/Center%20Banner/BC-Plastic-Surgery.png");
+    background-color: white;
+    background-size: cover;
+    background-position: center top;
+    font-family: 'Rock Salt', cursive;
+    font-size: 10px;
+    color: #383838	;
+    text-align: right;
+    
+  }
+
+  .navbar-brand{
+    font-weight: emphasis;
+    color: white;
+    font-family: 'Rock Salt', cursive;
+
+  }
