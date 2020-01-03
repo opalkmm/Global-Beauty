@@ -44,8 +44,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                   
-                     <form>
+
+                    <form>
                         <div id="type">
                             <fieldset class="form-group">
                                 <legend>Step 1: Pick Your Desired Service</legend>
@@ -56,7 +56,7 @@
                                         Breast Implants
                                     </label>
                                 </div>
-                                
+
                                 <div class="form-check">
                                     <label class="form-check-label">
                                         <input type="radio" class="form-check-input" name="optionsRadios" id="eyelids"
@@ -64,7 +64,7 @@
                                         Eyelids Surgery
                                     </label>
                                 </div>
-                                
+
                                 <div class="form-check disabled">
                                     <label class="form-check-label">
                                         <input type="radio" class="form-check-input" name="optionsRadios"
@@ -140,12 +140,27 @@
                 </fieldset>
                 </form>
             </div>
-        
 
-            <div class="col-sm">
-                
-                This is where the price table will be appended
-                
+            <!-- table div to hold the prices -->
+            <div class="col-sm" id='results'>
+                <table id ="table" style="width:50%">
+                    <thead>
+                        <tr>
+                            <th>Surgery Cost</th>
+                            <th>Flights</th>
+                            <th>Hotels</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id='cost'>
+                        <!-- <tr id='surCost'></tr>
+                        <tr id='flCost'></tr>
+                        <tr id='hoCost'></tr>
+                        <tr id='totalCost'></tr> -->
+
+                    </tbody>
+                </table>
             </div>
 
         </div>

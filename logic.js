@@ -13,21 +13,22 @@ $(document).ready(function() {
     }
 
     //get users' 'currentdate' to filter price
-//TODO
-// 1 date format getting
+    //TODO
+    // 1 date format getting
 
-// 2 city airport code to submit I think already correct in html
-// var startDate = new Date(...);
-// var endDateMoment = moment(startDate); // moment(...) can also be used to parse dates in string format
-// endDateMoment.add(1, 'months');
+    // 2 city airport code to submit I think already correct in html
+    // var startDate = new Date(...);
+    // var endDateMoment = moment(startDate); // moment(...) can also be used to parse dates in string format
+    // endDateMoment.add(1, 'months');
 
     var today = new Date();
     var startDate = moment().format("YYYY-MM-DD");
-    var endDate = moment(startDate).add(1, 'months').format("YYYY-MM-DD");
+    var endDate = moment(startDate)
+      .add(1, "months")
+      .format("YYYY-MM-DD");
 
     console.log(startDate);
     console.log(endDate);
-
 
     var flights = {
       async: true,
@@ -38,7 +39,9 @@ $(document).ready(function() {
         "JFK-sky/" +
         flightCountry +
         "-sky/" +
-        endDate + "?inboundpartialdate=" + startDate,
+        endDate +
+        "?inboundpartialdate=" +
+        startDate,
 
       //full link: "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2019-12-31?inboundpartialdate=2019-12-01",
 
@@ -47,12 +50,42 @@ $(document).ready(function() {
         "x-rapidapi-host":
           "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
         "x-rapidapi-key": "00c20503d7msh161c0e74fba392bp1beb43jsnde04f70eea46"
-      } 
+      }
     };
-    console.log(flights)
+    console.log(flights);
 
     $.ajax(flights).done(function(response) {
-      console.log(response);
+      //get the minimum price of the flight from the selected country
+      console.log(response.Quotes[0].MinPrice);
+
+      //*******DON'T FORGET TO LOOP THROUGH INDEX******************************************
+
+      let minPrice = response.Quotes[0].MinPrice;
+    //surgery type and cost
+      let surCost = "1";
+      let hotelCost = "2";
+      //*******DON'T FORGET TO LOOP THROUGH WHEN MULTIPLE COUNTRIES ARE SELECTED***********
+
+      //create function to append prices dynamically
+
+      function addRow(tableID){
+        let table = document.getElementById("table");
+         // Insert a row at the end of the table
+        let newRow = table.insertRow(-1);
+        // Insert a cell in the row at index 0
+        let newCell = newRow.insertCell(0);
+      // Append a text node to the cell
+        let newText = document.createTextNode(minPrice);
+
+        newCell.appendChild(newText);
+      }
+      // Call addRow() with the table's ID
+        addRow('table');
+
+     
+
+
+      console.log("MINPRICE : " + minPrice);
     });
   });
 });

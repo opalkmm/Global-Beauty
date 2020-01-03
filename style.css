@@ -18,3 +18,8 @@
     font-family: 'Rock Salt', cursive;
 
   }
+
+  table{
+    border: 1px solid black;
+    padding: 50px;
+  }
