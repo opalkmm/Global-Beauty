@@ -62,22 +62,19 @@ $(document).ready(function() {
 
       let minPrice = response.Quotes[0].MinPrice;
     //surgery type and cost
-      let surCost = "1";
-      let hotelCost = "2";
+      let surCost = 1;
+      let hotelCost = 2;
       //*******DON'T FORGET TO LOOP THROUGH WHEN MULTIPLE COUNTRIES ARE SELECTED***********
 
       //create function to append prices dynamically
 
       function addRow(tableID){
-        let table = document.getElementById("table");
-         // Insert a row at the end of the table
-        let newRow = table.insertRow(-1);
-        // Insert a cell in the row at index 0
-        let newCell = newRow.insertCell(0);
-      // Append a text node to the cell
-        let newText = document.createTextNode(minPrice);
+      var total = surCost + minPrice + hotelCost
+      //append cost table
+        $('#table > tbody:last-child').append('<tr>' + '<td>' + surCost + '</td>' + '<td>' + minPrice + '</td>'+ '<td>' + hotelCost + '</td>' + '<td>' + total + '</td>' +  '</tr>')
 
-        newCell.appendChild(newText);
+        
+
       }
       // Call addRow() with the table's ID
         addRow('table');
