@@ -39,18 +39,56 @@ var root = HTMLParser.parse(body);
 
 var tabTitles = root.querySelector(".tabs-menu");
 console.log("tabTitles\n");
-// console.log(tabTitles);
-// var tables = tabTitles.childNodes[0].childNodes;
-var tables = tabTitles
-var tables1 = tabTitles.childNodes
-var tables2 = tabTitles.childNodes[0]
-var tables3 = tabTitles.childNodes[0].children
-var tables4 = tabTitles
+var tables = tabTitles.childNodes;
+
+for (let i=0; i<tables.length; i++){
+  var tableTitles = tables[i].text;
+  console.log(tableTitles);
+
+}
+
+//actually we need to go 3rd child deep .childNodes.childNodes.childNodes
+var country;
+var costAvg;
+var tabs = root.querySelector(".tabs-content").childNodes;
+console.log(tabs);//why is this 43
+
+for (let i=0; i<tabs.length; tabs++){
+var tab = tabs[i].childNodes;
+console.log(tab)
+
+var tab = tabs[0];
+console.log(tab)
+
+var subtab = tab.childNodes;
+console.log(subtab)
+
+var subtab = subtab[0];
+console.log(subtab)
+
+// for (let j=0; j<subtab.length; j++){
+//   var subsub = subtab.childNodes;
+//   var tabCountry = subsub[0]
+//   var tabPrice = subsub[1]
+//   console.log(tabCountry)
+//   console.log(tabPrice)
+
+// }
+  // var thisCountry = tabs[i].firstChild.childNodes[0];
+  // var thisPrice = tabs[i].firstChild.childNodes[1];
+  // console.log(thisCountry);
+  // console.log(thisPrice);
+
+}
+// var tab1 = tabs.childNodes[0]
+// var averages = tabTitles.childNodes;
+// for (let i=0; i<averages.length; i++){
+//   let country=averages[i].
+// }
+
+// var tableTitles = tabTitles.childNodes[1].text;
 
 
-// console.log(tables)
-console.log(tables1)
-console.log(tables2.toString())
 // console.log(tables3)
 // console.log(tables4)
 
