@@ -6,6 +6,21 @@ var HTMLParser = require("node-html-parser");
 var html2json = require('html2json').html2json;
 
 var request = require("request");
+
+  // Set the configuration for your app
+  // TODO: Replace with your project's config object
+  var config = {
+    apiKey: "apiKey",
+    authDomain: "projectId.firebaseapp.com",
+    databaseURL: "https://databaseName.firebaseio.com",
+    storageBucket: "bucket.appspot.com"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  var database = firebase.database();
+
+
 //when it's live actually query the site but for now just use the saved local data for dev
 var options = {
   url: "https://www.medicaltourism.com/compare-prices"
