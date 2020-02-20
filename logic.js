@@ -78,11 +78,28 @@ $(document).ready(function() {
       }
       // Call addRow() with the table's ID
         addRow('table');
-
-     
-
-
       console.log("MINPRICE : " + minPrice);
     });
+
+//pulling data for the hotel in the selected countries
+//*********** ADD USER'S FILTER ****************
+
+let hotels = {
+  async: true,
+  crossDomain: true,
+  url: "https://www.googleapis.com/travelpartner/v2.0/4200042/prices/1066",
+  method: "GET"
+}
+
+console.log(hotels);
+
+$.ajax(hotels).done(function(response) {
+  
+  var hotelPrices = hotels.response.Prices
+  console.log(hotels.hotelPrices);
+
+});
+
+
   });
 });
