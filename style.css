@@ -1,15 +1,15 @@
 
 
   .jumbotron{
-    background-image: url("https://www.bangkokhospital.com/sites/default/files/Center%20Banner/BC-Plastic-Surgery.png");
+    background-image: url("https://kpopping.com/uploads/documents/20178HighCut_10_b303826.jpeg");
     background-color: white;
     background-size: cover;
-    background-position: center top;
+    background-position: center center;    
     font-family: 'Rock Salt', cursive;
     font-size: 10px;
-    color: #383838	;
+    color: #383838;
     text-align: right;
-    
+    margin-top: 0%;
   }
 
   .navbar-brand{
@@ -17,4 +17,49 @@
     color: white;
     font-family: 'Rock Salt', cursive;
 
+  }
+
+  .slideContainer{
+    width: 75%;
+  }
+  .slider::before{
+    content: '0';
+    color: gray;
+    font-weight: bolder;
+    position: relative;
+    left: -20px; 
+    /* top: 26%; */
+    
+  } 
+
+.slider::after{
+  content: '1000';
+  color: gray;
+  font-weight: bolder;
+  position: relative;
+  left: 50px; 
+  /* top: 26%; */
+}
+
+  .slider{
+    -webkit-appearance: none;
+    width:100%;
+    height: 20px;
+    background: linear-gradient(90deg, rgb(0,0,0)0%, rgb(0,0,0)100%);
+    outline: none;
+    /* opacity:0.7; */
+    /* -webkit-transition: 0.2s;
+    transition: opacity 0.2s; */
+    border-radius: 12px;
+    box-shadow: 0px 1px 10px 1px gray;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: auto;
+    width: 1em; /* Set a specific slider handle width */
+    height: 1em; /* Slider handle height */
+    background: yellow; /* Green background */
+    cursor: move; /* Cursor on hover */
+    margin-right: 0em;
   }

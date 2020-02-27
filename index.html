@@ -21,7 +21,7 @@
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
-    <title> Beauty Global</title>
+    <title>Global Beauty</title>
 </head>
 
 <body>
@@ -33,137 +33,169 @@
         </nav>
         <!-- main photo as header -->
         <div class="jumbotron">
-            <em> No boundary when it comes to beauty </em>
+            <div class = "container" style="height: 150px;">
+            <b> No boundary when it comes to beauty </b>
         </div>
+    </div>
+    </div>
 
 
 
-        <!-- hold the selections for surgery type, hotels, flights -->
-        <!-- Plastic Surgery options to choose from. I pick some common ones. I will add more later. -->
+    <!-- hold the selections for surgery type, hotels, flights -->
+    <!-- Plastic Surgery options to choose from. I pick some common ones. I will add more later. -->
 
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                   
-                     <form>
-                        <div id="type">
-                            <fieldset class="form-group">
-                                <legend>Step 1: Pick Your Desired Service</legend>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optionsRadios" id="breast"
-                                            value="breast" checked="">
-                                        Breast Implants
-                                    </label>
-                                </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <form>
+                    <div id="type">
+                        <fieldset class="form-group">
+                            <legend>Step 1: Pick Your Desired Service</legend>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios" id="breast"
+                                        value="breast" checked="">
+                                    Breast Implants
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios" id="eyelids"
+                                        value="eyelids">
+                                    Eyelids Surgery
+                                </label>
+                            </div>
+
+                            <div class="form-check disabled">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios" id="Rhinoplasty"
+                                        value="Rhinoplasty" disabled="">
+                                    Rhinoplasty
+                                </label>
+                            </div>
+                    </div>
+                    </fieldset>
+
+                    <!-- flights - maybe I should just pick certain countries that have comprehensive services. For now, I'm picking random ones. -->
+
+                    <div id="flights">
+                        <fieldset class="form-group">
+                            <legend>Step 2: Pick Your Destination(s)</legend>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="DEL">
+                                    India
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="MEX"
+                                        checked="">
+                                    Mexico
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="ICN">
+                                    South Korea
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="MAD">
+                                    Spain
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="BKK">
+                                    Thailand
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="DXB">
+                                    United Arab Emirates
+                                </label>
+                            </div>
+                            
+                            
+                            
+                            <div class="destination">
                                 
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optionsRadios" id="eyelids"
-                                            value="eyelids">
-                                        Eyelids Surgery
+                                    <legend>Step 3: Pick Your Hotel </legend>
+                                    <label>Maximum hotel price per night (average of 8 days for a
+                                        recovery)
                                     </label>
-                                </div>
-                                
-                                <div class="form-check disabled">
-                                    <label class="form-check-label">
-                                        <input type="radio" class="form-check-input" name="optionsRadios"
-                                            id="Rhinoplasty" value="Rhinoplasty" disabled="">
-                                        Rhinoplasty
-                                    </label>
-                                </div>
-                        </div>
+                            </div>
+
+                            <div class="slideContainer">
+      
+                                <input type="range" min="1" max="1000" value="1" id="myRange" class ="slider" />       
+                                <p>Maximum Price: <span id="value"></span></p>
+                            </div>
+
+
+                            </form>
+                                    
+                                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                         </fieldset>
-
-                        <!-- flights - maybe I should just pick certain countries that have comprehensive services. For now, I'm picking random ones. -->
-
-                        <div id="flights">
-                            <fieldset class="form-group">
-                                <legend>Step 2: Pick Your Destination(s)</legend>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name='country' type="checkbox" value="DEL">
-                                        India
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name='country' type="checkbox" value="MEX"
-                                            checked="">
-                                        Mexico
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name='country' type="checkbox" value="ICN">
-                                        South Korea
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name='country' type="checkbox" value="MAD">
-                                        Spain
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name='country' type="checkbox" value="BKK">
-                                        Thailand
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name='country' type="checkbox" value="DXB">
-                                        United Arab Emirates
-                                    </label>
-                                </div>
-                                <div class="destination">
-                                    <fieldset class="form-group">
-                                        <legend>Step 3: Pick Your Hotel </legend>
-                                        <label for="customRange1">Maximum hotel price per night (average of 8 days for a
-                                            recovery)
-                                        </label>
-
-                                        <div class="d-flex  my-4">
-                                            <span class="font-weight-bold blue-text mr-2 mt-1">$0</span>
-                                            <form class="range-field w-75">
-                                                <input class="border-0" type="range" min="0" max="1000" />
-                                            </form>
-                                            <span class="font-weight-bold blue-text ml-2 mt-1">$1000</span>
-                                        </div>
-
-                                    </fieldset>
-                                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-                            </fieldset>
-                        </div>
-                </div>
-                </fieldset>
-                </form>
+                    </div>
             </div>
-        
+            </fieldset>
+            </form>
 
-            <div class="col-sm">
-                
-                This is where the price table will be appended
-                
+            <!-- table div to hold the prices -->
+            <div class="col-sm-6">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Surgery Cost</th>
+                            <th>Flights</th>
+                            <th>Hotels</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id='cost'>
+                        <!-- <tr id='surCost'></tr>
+                        <tr id='flCost'></tr>
+                        <tr id='hoCost'></tr>
+                        <tr id='totalCost'></tr> -->
+
+                    </tbody>
+                </table>
             </div>
-
         </div>
+    </div>
 
 
 
 
 
 
-        <!-- jQuery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
-            integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
-        <!-- jQueryUI -->
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-        <!-- local JS file -->
-        <script src="logic.js"></script>
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <!-- jQueryUI -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- local JS file -->
+    <script src="logic.js"></script>
+
+
+
 </body>
 
 </html>

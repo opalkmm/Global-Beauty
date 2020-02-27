@@ -8,26 +8,23 @@ var html2json = require('html2json').html2json;
 var request = require("request");
 
   // Set the configuration for your app
-  // TODO: Replace with your project's config object
-  // var config = {
-  //   apiKey: "apiKey",
-  //   authDomain: "projectId.firebaseapp.com",
-  //   databaseURL: "https://databaseName.firebaseio.com",
-  //   storageBucket: "bucket.appspot.com"
-  // };
+  //config object and initialize firebase
+ 
+  const firebaseConfig = {
+    apiKey: "AIzaSyC1tZPmoOueA0xSyULNNt4fgxoh7FFTzLs",
+    authDomain: "root-pixel-243301.firebaseapp.com",
+    databaseURL: "https://root-pixel-243301.firebaseio.com",
+    projectId: "root-pixel-243301",
+    storageBucket: "root-pixel-243301.appspot.com",
+    messagingSenderId: "249162058472",
+    appId: "1:249162058472:web:694374383d459ae7b5975d",
+    measurementId: "G-KQB6PQSP57"
+  };
 
-  // var firebaseConfig = {
-  //   apiKey: "AIzaSyAAl4HoMLITuHncLnN9OMSSKhjOXnx0C7Q",
-  //   authDomain: "train-time-a2fb5.firebaseapp.com",
-  //   databaseURL: "https://train-time-a2fb5.firebaseio.com",
-  //   projectId: "train-time-a2fb5",
-  //   storageBucket: "train-time-a2fb5.appspot.com",
-  //   messagingSenderId: "907721756168"
-  // };
-  // firebase.initializeApp(config);
+  firebase.initializeApp(firebaseConfig);
 
-  // // Get a reference to the database service
-  // var database = firebase.database();
+  //Get a reference to the database service
+  var database = firebase.database();
 
 
 //when it's live actually query the site but for now just use the saved local data for dev
@@ -45,8 +42,8 @@ var fs = require("fs");
 var body;
 
 //uncomment the below two lines to run on local html copy instead of performing ajax call
-// body = fs.readFileSync(path, "utf8");
-// process(body);
+body = fs.readFileSync(path, "utf8");
+process(body);
 
 
 function callback(error, response, body) {
