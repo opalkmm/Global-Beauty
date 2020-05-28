@@ -1,9 +1,201 @@
 <!DOCTYPE html>
 <html>
-    <head>
 
-    </head>
-    <body>
-        <h1>Nothing</h1>
-    </body>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- link to Bootstrap4 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- link to Bootswatch -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/lux/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-oOs/gFavzADqv3i5nCM+9CzXe3e5vXLXZ5LZ7PplpsWpTCufB7kqkTlC9FtZ5nJo" crossorigin="anonymous">
+
+    <!-- main font -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700&display=swap" rel="stylesheet">
+
+    <!-- Brand font -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Rock+Salt&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Global Beauty</title>
+</head>
+
+<body>
+    <!-- Brand Heading -->
+    <!-- main photo as header -->
+    <div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1">GLOBAL BEAUTY</span>
+        </nav>
+        <!-- main photo as header -->
+        <div class="jumbotron">
+            <div class = "container" style="height: 150px;">
+            <b> No boundary when it comes to beauty </b>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- hold the selections for surgery type, hotels, flights -->
+    <!-- Plastic Surgery options to choose from. I pick some common ones. I will add more later. -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+
+                <form>
+                    <div id="type">
+                        <fieldset class="form-group">
+                            <legend>Step 1: Pick Your Desired Service</legend>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios" id="breast"
+                                        value="breast" checked="">
+                                    Breast Implants
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios" id="eyelids"
+                                        value="eyelids">
+                                    Eyelids Surgery
+                                </label>
+                            </div>
+
+                            <div class="form-check disabled">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="optionsRadios" id="Rhinoplasty"
+                                        value="Rhinoplasty" disabled="">
+                                    Rhinoplasty
+                                </label>
+                            </div>
+                    </div>
+                    </fieldset>
+
+                    <!-- flights - maybe I should just pick certain countries that have comprehensive services. For now, I'm picking random ones. -->
+
+                    <div id="flights">
+                        <fieldset class="form-group">
+                            <legend>Step 2: Pick Your Destination(s)</legend>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="DEL">
+                                    India
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="MEX"
+                                        checked="">
+                                    Mexico
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="ICN">
+                                    South Korea
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="MAD">
+                                    Spain
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="BKK">
+                                    Thailand
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" name='country' type="checkbox" value="DXB">
+                                    United Arab Emirates
+                                </label>
+                            </div>
+                            
+                            
+                            
+                            <div class="destination">
+                                
+                                    <legend>Step 3: Pick Your Hotel </legend>
+                                    <label>Maximum hotel price per night (average of 8 days for a
+                                        recovery)
+                                    </label>
+                            </div>
+
+                            <div class="slideContainer">
+      
+                                <input type="range" min="1" max="1000" value="1" id="myRange" class ="slider" />       
+                                <p>Maximum Price: <span id="value"></span></p>
+                            </div>
+
+
+                            </form>
+                                    
+                                <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+                        </fieldset>
+                    </div>
+            </div>
+            </fieldset>
+            </form>
+
+            <!-- table div to hold the prices -->
+            <div class="col-sm-6">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>Surgery Cost</th>
+                            <th>Flights</th>
+                            <th>Hotels</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id='cost'>
+                        <!-- <tr id='surCost'></tr>
+                        <tr id='flCost'></tr>
+                        <tr id='hoCost'></tr>
+                        <tr id='totalCost'></tr> -->
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-analytics.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"
+        integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+    <!-- jQueryUI -->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- local JS file -->
+    <script src="logic.js"></script>
+
+
+
+</body>
+
 </html>
