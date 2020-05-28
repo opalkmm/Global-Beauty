@@ -146,7 +146,6 @@ for(i = 0; i < procedure.length; i++){
     });
 
 //pulling data for the hotel in the selected countries
-//*********** ADD USER'S FILTER ****************
 
 // let hotels = {
 //   async: true,
@@ -165,6 +164,7 @@ for(i = 0; i < procedure.length; i++){
 //   console.log(hotels.hotelPrices);
 
 // });
+
 
 
 
