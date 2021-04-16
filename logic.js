@@ -153,9 +153,6 @@ for(i = 0; i < procedure.length; i++){
 //   url: "https://www.googleapis.com/travelpartner/v2.0/4200042/prices/1066",
 //   method: "GET"
 // }
-
-// //key:249162058472-4d7hcb6dqt4tp0emmok4rqrnu1isfdo2.apps.googleusercontent.com
-
 // console.log(hotels);
 
 // $.ajax(hotels).done(function(response) {
